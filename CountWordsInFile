@@ -1,0 +1,12 @@
+file_1 = open("filename.txt","r")
+list_1 = []
+
+for line in file_1:
+
+    list_1.extend(line.split(" "))
+    
+print(len(list_1))
+
+    
+
+
