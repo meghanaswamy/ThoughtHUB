@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int main() {
+    int x=0xABCD;
+    int a,i,j,y = 0x00;
+    
+    /* 1010 1011 1100 1101*/ 
+    for(i=0,j=15;i<=15,j>=0;i++,j--)
+    {
+        a = (x & (1<<i)) >> i;
+     //   printf("a = %x\t",a);
+        y = y | (a << j);
+      //  printf("out = %x\t",y);
+        
+    }
+    
+    /* 1011 0011 1101 0101 */
+    printf("%x",y);
+}
