@@ -1,0 +1,23 @@
+data = input("Enter your string: ")
+value = int(input("Enter shift value: "))
+
+str = ""
+if value in range(0,26):
+    
+    for ch in range(len(data)):
+        if ord(data[ch]) in range(65,90):
+            out = chr((ord(data[ch]) + value))
+            if ord(out) > 90:
+                out = chr(31 + (ord(out) - 90))
+            str += out
+        elif ord(data[ch]) in range(97,122):
+            out = chr((ord(data[ch]) + value))
+            if ord(out) > 122:
+                out = chr(96 + (ord(out) - 122))
+            str += out
+        else:
+            str += data[ch]
+            
+    print(str)
+else:
+    print("Please enter a valid shift value!!!")            
