@@ -1,0 +1,6 @@
+data = input("Enter your data: ").replace(" ","").lower()
+reverse_data = data[::-1].lower()
+if data == reverse_data:
+    print("Its a palindrome")
+else:
+    print("Its not a palindrome")
