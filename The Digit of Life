@@ -1,0 +1,11 @@
+date = input("Enter Date of Birth DDMMYYYY: ")
+
+if not date.isdigit() and len(date) != 8:
+    print("enter a valid date")
+else:
+    add_value = 0
+    for i in date:
+        add_value += int(i)
+    l1 = (list(str(add_value)))
+    l2 = sum(map(lambda v: int(v), l1))
+    print('Digit of Life',l2)
